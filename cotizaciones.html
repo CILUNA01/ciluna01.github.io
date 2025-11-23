@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizaciones - Filipo's Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cotizaciones.css">
+    <link rel="stylesheet" href="servicio-detalle.css">
+    <link rel="stylesheet" href="movil.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <img src="img/LOGOO.png" alt="Filipo's Design" class="logo-image">
+                </div>
+                <!-- MENU HAMBURGUESA -->
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="cotizaciones.html" class="btn-primary">Cotiza ahora</a>
+                </div>
+                <div class="nav-icons">
+                    <!-- Icono de Usuario directo a login -->
+                    <a href="login.html" class="user-container">
+                        <img src="img/user.png" alt="Usuario" class="nav-icon user-icon">
+                    </a>
+                    
+                    <!-- Icono de Carrito -->
+                    <a href="carrito.html" class="cart-container">
+                        <img src="img/carrito.png" alt="Carrito" class="nav-icon">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="cotizaciones-page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Solicita tu Cotización</h1>
+                <p>Completa el formulario y recibe una cotización personalizada para tu proyecto</p>
+            </div>
+        </div>
+
+        <!-- FORMULARIO UNIVERSAL (REEMPLAZA EL FORMULARIO PEQUEÑO) -->
+        <section class="customization-section">
+            <div class="container">
+                <!-- DETECCIÓN AUTOMÁTICA DE CATEGORÍA -->
+                <div id="categoria-info" style="text-align: center; margin-bottom: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 0.5rem;">
+                    <h3 id="categoria-titulo">Cotización General</h3>
+                    <p id="categoria-descripcion">Selecciona el tipo de trabajo que necesitas</p>
+                </div>
+
+                <div class="customization-panel">
+                    <!-- SUBIR DISEÑO -->
+                    <div class="upload-section">
+                        <h3>Sube tu diseño o referencia</h3>
+                        <input type="file" id="design-upload" accept="image/*,.pdf,.ai,.eps,.cdr,.jpg,.png" multiple>
+                        <div class="image-preview" id="image-preview">
+                            <p>Puedes subir imágenes, PDFs, archivos vectoriales (AI, EPS)</p>
+                        </div>
+                    </div>
+
+                    <!-- CAMPOS UNIVERSALES -->
+                    <div class="options-section">
+                        <!-- INFORMACIÓN BÁSICA -->
+                        <div class="option-group">
+                            <label>¿Qué necesitas realizar?</label>
+                            <textarea id="descripcion-proyecto" placeholder="Describe detalladamente lo que necesitas. Ej: 'Necesito bordar el logo de mi empresa en 20 playeras' o 'Quiero un anuncio luminoso para mi negocio de 2x1 metros'"></textarea>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Cantidad o Medidas:</label>
+                            <input type="text" id="cantidad-medidas" placeholder="Ej: 50 playeras, 2x1 metros, 100 stickers">
+                        </div>
+
+                        <div class="option-group">
+                            <label>Material o Sustrato:</label>
+                            <select id="material">
+                                <option value="">Selecciona el material</option>
+                                <option value="playera">Playera/Algodón</option>
+                                <option value="gorra">Gorra</option>
+                                <option value="sudadera">Sudadera</option>
+                                <option value="vinil">Vinil</option>
+                                <option value="lona">Lona</option>
+                                <option value="acrilico">Acrílico</option>
+                                <option value="metal">Metal</option>
+                                <option value="madera">Madera</option>
+                                <option value="papel">Papel</option>
+                                <option value="taza">Taza/Cerámica</option>
+                                <option value="otro">Otro material</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Colores principales:</label>
+                            <input type="text" id="colores" placeholder="Ej: Azul, rojo y blanco">
+                        </div>
+
+                        <!-- ESPECIFICACIONES TÉCNICAS -->
+                        <div class="option-group">
+                            <label>Tipo de trabajo:</label>
+                            <select id="tipo-trabajo">
+                                <option value="">Selecciona el tipo</option>
+                                <option value="bordado">Bordado</option>
+                                <option value="serigrafia">Serigrafía</option>
+                                <option value="vinil-textil">Vinil Textil</option>
+                                <option value="dtf">DTF</option>
+                                <option value="impresion-uv">Impresión UV</option>
+                                <option value="luz-neon-led">Luz de Neón LED</option>
+                                <option value="lonas-impresas">Lonas Impresas</option>
+                                <option value="sublimados-tela">Sublimados en Tela</option>
+                                <option value="anuncios-luminosos">Anuncios Luminosos</option>
+                                <option value="marcos-luz">Marcos de Luz</option>
+                                <option value="stickers">Stickers</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Fecha deseada de entrega:</label>
+                            <input type="date" id="fecha-entrega">
+                        </div>
+
+                        <!-- INFORMACIÓN ADICIONAL -->
+                        <div class="option-group">
+                            <label>Ubicación o uso:</label>
+                            <select id="ubicacion-uso">
+                                <option value="">¿Dónde se usará?</option>
+                                <option value="interior">Interior</option>
+                                <option value="exterior">Exterior</option>
+                                <option value="vehiculo">Vehículo</option>
+                                <option value="vitrina">Vitrina/Ventana</option>
+                                <option value="piso">Piso</option>
+                                <option value="pared">Pared</option>
+                                <option value="textil">Prenda textil</option>
+                                <option value="promocional">Artículo promocional</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group full-width">
+                            <label>Instrucciones especiales o requisitos:</label>
+                            <textarea id="instrucciones-especiales" placeholder="Algún requisito específico? Instalación especial? Material específico?"></textarea>
+                        </div>
+
+                        <!-- INFORMACIÓN DE CONTACTO -->
+                        <div class="contact-info">
+                            <h3>Tu información de contacto</h3>
+                            <div class="form-grid">
+                                <div class="option-group">
+                                    <label>Nombre completo *</label>
+                                    <input type="text" id="nombre" required>
+                                </div>
+                                <div class="option-group">
+                                    <label>Email *</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="option-group">
+                                    <label>Teléfono *</label>
+                                    <input type="tel" id="telefono" required>
+                                </div>
+                                <div class="option-group">
+                                    <label>Empresa (opcional)</label>
+                                    <input type="text" id="empresa">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRECIO ESTIMADO -->
+                    <div class="price-section">
+                        <h3>Recibirás tu cotización en máximo 24 horas</h3>
+                        <p>Te contactaremos para darte el precio exacto según tus especificaciones</p>
+                    </div>
+
+                    <!-- BOTONES -->
+                    <div class="action-buttons">
+                        <button class="btn-primary" id="solicitar-cotizacion">Solicitar Cotización</button>
+                        <button class="btn-secondary" id="limpiar-formulario">Limpiar Formulario</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE CONFIRMACIÓN -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <h3>¡Cotización Solicitada!</h3>
+            <p>Hemos recibido tu solicitud. Nos pondremos en contacto contigo en un máximo de 24 horas.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" id="cerrar-modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Filipo's Design. Todos los derechos reservados.<br>Chilapa de Alvarez, Guerrero, México</p>
+                <div class="social-links">
+                    <a href="https://wa.me/527771795255" target="_blank" aria-label="WhatsApp">
+                        <img src="img/w1.png" alt="WhatsApp" class="social-icon">
+                    </a>
+                    <a href="https://www.facebook.com/share/1Fc7dzfv68/" target="_blank" aria-label="Facebook">
+                        <img src="img/f1.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
+                        <img src="img/i1.png" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cotizaciones.js"></script>
+    <script src="movil.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

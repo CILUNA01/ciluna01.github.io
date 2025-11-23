@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - Filipo's Design</title>
+    <link rel="stylesheet" href="recuperar.css">
+</head>
+<body>
+    <div class="recovery-page">
+        <div class="recovery-container">
+            <div class="recovery-header">
+                <div class="logo">
+                    <img src="../img/LOGOO.png" alt="Filipo's Design">
+                </div>
+                <h1>Recuperar Contraseña</h1>
+                <p>Te enviaremos un enlace para restablecer tu contraseña</p>
+            </div>
+
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span>Email</span>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <span>Código</span>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <span>Nueva Contraseña</span>
+                </div>
+            </div>
+
+            <div class="success-message" id="successMessage"></div>
+            <div class="error-message" id="errorMessage"></div>
+
+            <!-- Paso 1: Email -->
+            <form class="recovery-form active" id="step1Form" data-step="1">
+                <div class="form-group">
+                    <label for="email">Email registrado</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+
+                <button type="submit" class="btn-recovery">
+                    <span class="btn-text">Enviar Código</span>
+                    <div class="btn-loader"></div>
+                </button>
+
+                <div class="recovery-footer">
+                    <a href="login.html" class="back-link">← Volver al Login</a>
+                </div>
+            </form>
+
+            <!-- Paso 2: Código de verificación -->
+            <form class="recovery-form" id="step2Form" data-step="2">
+                <div class="form-group">
+                    <label for="code">Código de verificación</label>
+                    <input type="text" id="code" name="code" required placeholder="Ingresa el código de 6 dígitos" maxlength="6">
+                    <div class="code-info">
+                        <p>Hemos enviado un código a: <span id="userEmail"></span></p>
+                        <button type="button" class="resend-code" id="resendCode">Reenviar código</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-recovery">
+                    <span class="btn-text">Verificar Código</span>
+                    <div class="btn-loader"></div>
+                </button>
+
+                <div class="recovery-footer">
+                    <a href="#" class="back-link" onclick="goToStep(1)">← Cambiar email</a>
+                </div>
+            </form>
+
+            <!-- Paso 3: Nueva contraseña -->
+            <form class="recovery-form" id="step3Form" data-step="3">
+                <div class="form-group">
+                    <label for="newPassword">Nueva Contraseña</label>
+                    <div class="password-input">
+                        <input type="password" id="newPassword" name="newPassword" required placeholder="Tu nueva contraseña">
+                        <button type="button" class="toggle-password">👁️</button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar" id="strengthBar"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirma tu nueva contraseña">
+                        <button type="button" class="toggle-password">👁️</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-recovery">
+                    <span class="btn-text">Restablecer Contraseña</span>
+                    <div class="btn-loader"></div>
+                </button>
+
+                <div class="recovery-footer">
+                    <a href="#" class="back-link" onclick="goToStep(2)">← Volver al código</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="recuperar.js"></script>
+</body>
+</html>

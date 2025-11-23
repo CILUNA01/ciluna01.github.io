@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Filipo's Design</title>
+    <link rel="stylesheet" href="galeria.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <img src="img/LOGOO.png" alt="Filipo's Design" class="logo-image">
+            </div>
+            <!-- MENU HAMBURGUESA -->
+<button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="galeria.html" class="active">Galeria</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="cotizaciones.html" class="btn-primary">Cotiza ahora</a>
+            </div>
+            <div class="nav-icons">
+    <!-- Icono de Usuario directo a login -->
+    <a href="login.html" class="user-container">
+        <img src="img/user.png" alt="Usuario" class="nav-icon user-icon">
+    </a>
+    
+    <!-- Icono de Carrito -->
+    <a href="carrito.html" class="cart-container">
+        <img src="img/carrito.png" alt="Carrito" class="nav-icon">
+        <span class="cart-count">0</span>
+    </a>
+</div>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <!-- Page Heading -->
+        <section class="page-heading">
+            <div class="container">
+                <div class="heading-content">
+                    <h1>Nuestra Galería de Proyectos</h1>
+                    <p>Explora la calidad y versatilidad de nuestros trabajos en bordado, estampado y serigrafía. Cada proyecto es un testimonio de nuestra dedicación y atención al detalle.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Chips -->
+        <section class="filters">
+            <div class="container">
+                <div class="filter-chips">
+                    <button class="filter-chip active" data-filter="all">Todos</button>
+                    <button class="filter-chip" data-filter="bordado">Bordado</button>
+                    <button class="filter-chip" data-filter="estampado">Estampado</button>
+                    <button class="filter-chip" data-filter="serigrafia">Serigrafía</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Grid -->
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Bordado Items -->
+                    <div class="gallery-item" data-category="bordado">
+                        <div class="gallery-image" style="background-image: url('img/c6.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Bordado en Gorra</h3>
+                            <p>Gorra negra con logo corporativo bordado</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="bordado">
+                        <div class="gallery-image" style="background-image: url('img/c11.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Bordado Detallado</h3>
+                            <p>Parche bordado con detalles intrincados</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="bordado">
+                        <div class="gallery-image" style="background-image: url('img/c4.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Bordado en Polo</h3>
+                            <p>Polo azul marino con logo bordado</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="bordado">
+                        <div class="gallery-image" style="background-image: url('img/c3.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Bordado Corporativo</h3>
+                            <p>Chaqueta de uniforme con bordado</p>
+                        </div>
+                    </div>
+
+                    <!-- Estampado Items -->
+                    <div class="gallery-item" data-category="estampado">
+                        <div class="gallery-image" style="background-image: url('img/c2.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Estampado en Camiseta</h3>
+                            <p>Camiseta blanca con diseño gráfico</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="estampado">
+                        <div class="gallery-image" style="background-image: url('img/c1.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Estampado Personalizado</h3>
+                            <p>Camiseta oscura con diseño único</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="estampado">
+                        <div class="gallery-image" style="background-image: url('img/c4.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Diseños en Camisetas</h3>
+                            <p>Variedad de camisetas estampadas</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="estampado">
+                        <div class="gallery-image" style="background-image: url('img/BORDADO.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Impresión en Sudadera</h3>
+                            <p>Sudadera gris con impresión grande</p>
+                        </div>
+                    </div>
+
+                    <!-- Serigrafía Items -->
+                    <div class="gallery-item" data-category="serigrafia">
+                        <div class="gallery-image" style="background-image: url('img/IMPRESION.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Serigrafía en Bolsa</h3>
+                            <p>Bolsa de tela con logo serigrafiado</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="serigrafia">
+                        <div class="gallery-image" style="background-image: url('img/Venil_textil.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Serigrafía a Color</h3>
+                            <p>Proceso de serigrafía multicolor</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="serigrafia">
+                        <div class="gallery-image" style="background-image: url('img/c8.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Serigrafía en Mandil</h3>
+                            <p>Delantal con logo de restaurante</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="serigrafia">
+                        <div class="gallery-image" style="background-image: url('img/c10.jpeg')"></div>
+                        <div class="gallery-overlay">
+                            <h3>Impresión en Tote Bag</h3>
+                            <p>Bolsa tote con ilustración serigrafiada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>¿Listo para transformar tu idea en realidad?</h2>
+                <p>Contáctanos y recibe una cotización personalizada para tu proyecto. Hacemos que tus diseños cobren vida con la más alta calidad.</p>
+                
+                <a href="cotizaciones.html" class="btn-primary large">Cotiza tu proyecto</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Filipo's Design. Todos los derechos reservados.<br>Chilapa de Alvarez, Guerrero, México</p>
+                <div class="social-links">
+                    <a href="https://wa.me/527771795255" target="_blank" aria-label="WhatsApp">
+                        <img src="img/w1.png" alt="WhatsApp" class="social-icon">
+                    </a>
+                    <a href="https://www.facebook.com/share/1Fc7dzfv68/" target="_blank" aria-label="Facebook">
+                        <img src="img/f1.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
+                        <img src="img/i1.png" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="galeria.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

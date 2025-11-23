@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinil Textil - Filipo's Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="servicio-detalle.css">
+    <link rel="stylesheet" href="movil.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <img src="img/LOGOO.png" alt="Filipo's Design" class="logo-image">
+                </div>
+                <!-- MENU HAMBURGUESA -->
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                    <!-- BOTÓN COTIZA AHORA -->
+                    <a href="cotizaciones.html" class="btn-primary">Cotiza ahora</a>
+                </div>
+                <div class="nav-icons">
+                    <!-- ICONO USUARIO CON LINK A LOGIN -->
+                    <a href="login.html" class="user-container">
+                        <img src="img/user.png" alt="Usuario" class="nav-icon">
+                    </a>
+                    <!-- ICONO CARRITO -->
+                    <a href="carrito.html" class="cart-container">
+                        <img src="img/carrito.png" alt="Carrito" class="nav-icon">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-detail">
+        <!-- HERO SECTION -->
+        <section class="service-hero">
+            <div class="container">
+                <h1>Vinil Textil</h1>
+                <p>Aplicación de vinil textil de alta resistencia ideal para playeras, sudaderas y uniformes, <br>
+                    con acabados limpios y colores sólidos.</p>
+            </div>
+        </section>
+
+        <!-- GALERÍA MEJORADA -->
+        <section class="service-gallery">
+            <div class="container">
+                <h2>Nuestros Trabajos de Vinil Textil</h2>
+                <div class="works-grid">
+                    <!-- VIDEO 1 -->
+                    <div class="work-item video-item">
+                        <div class="media-container" onclick="abrirVideo(this)">
+                            <video muted loop class="gallery-video">
+                                <source src="VIDEOS/BOR1.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                                <span class="play-text">Haz clic para ver completo</span>
+                            </div>
+                        </div>
+                        <p>Proceso de vinil textil en playera</p>
+                    </div>
+
+                    <!-- IMAGEN 1 -->
+                    <div class="work-item image-item">
+                        <div class="media-container">
+                            <img src="img/BORDADO_SU.jpeg" alt="Bordado en gorra" class="gallery-image">
+                        </div>
+                        <p>Vinil Texti en gorra</p>
+                    </div>
+
+                    <!-- VIDEO 2 -->
+                    <div class="work-item video-item">
+                        <div class="media-container" onclick="abrirVideo(this)">
+                            <video muted loop class="gallery-video">
+                                <source src="VIDEOS/B.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                                <span class="play-text">Haz clic para ver completo</span>
+                            </div>
+                        </div>
+                        <p>Vinil Textil detallado en uniforme</p>
+                    </div>
+
+                    <!-- IMAGEN 2 -->
+                    <div class="work-item image-item">
+                        <div class="media-container">
+                            <img src="img/c3.jpeg" alt="Bordado en uniforme" class="gallery-image">
+                        </div>
+                        <p>Vinil Texti en uniforme</p>
+                    </div>
+
+                    <!-- VIDEO 3 -->
+                    <div class="work-item video-item">
+                        <div class="media-container" onclick="abrirVideo(this)">
+                            <video muted loop class="gallery-video">
+                                <source src="VIDEOS/BOR2.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                                <span class="play-text">Haz clic para ver completo</span>
+                            </div>
+                        </div>
+                        <p>Vinil Textil profesional</p>
+                    </div>
+
+                    <!-- IMAGEN 3 -->
+                    <div class="work-item image-item">
+                        <div class="media-container">
+                            <img src="img/c11.jpeg" alt="Bordado detallado" class="gallery-image">
+                        </div>
+                        <p>Vinil Texti detallado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN COTIZACIÓN SIMPLIFICADA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>¿Listo para transformar tu idea en realidad?</h2>
+                    <p>Contáctanos y recibe una cotización personalizada para tu proyecto.</p>
+                    <p>Hacemos que tus diseños cobren vida con la más alta calidad.</p>
+                    
+                    <div class="cta-button">
+                        <!-- BOTÓN PRINCIPAL QUE REDIRIGE AL FORMULARIO DE COTIZACIONES -->
+                        <a href="cotizaciones.html?servicio=bordado" class="btn-cotizar">
+                            Cotiza tu Proyecto
+                        </a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Filipo's Design. Todos los derechos reservados.<br>Chilapa de Alvarez, Guerrero, México</p>
+                <div class="social-links">
+                    <a href="https://wa.me/527771795255" target="_blank" aria-label="WhatsApp">
+                        <img src="img/w1.png" alt="WhatsApp" class="social-icon">
+                    </a>
+                    <a href="https://www.facebook.com/share/1Fc7dzfv68/" target="_blank" aria-label="Facebook">
+                        <img src="img/f1.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
+                        <img src="img/i1.png" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL PARA VIDEOS COMPLETOS -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <button class="close-modal" onclick="cerrarVideo()">&times;</button>
+            <video controls id="modalVideo">
+                Tu navegador no soporta el video.
+            </video>
+        </div>
+    </div>
+
+    <script src="movil.js"></script>
+    <script src="servicio-detalle.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        // Funcionalidad para videos
+        function abrirVideo(element) {
+            const videoSrc = element.querySelector('video').getAttribute('src');
+            const modalVideo = document.getElementById('modalVideo');
+            const videoModal = document.getElementById('videoModal');
+            
+            modalVideo.setAttribute('src', videoSrc);
+            videoModal.style.display = 'flex';
+            modalVideo.play();
+        }
+
+        function cerrarVideo() {
+            const modalVideo = document.getElementById('modalVideo');
+            const videoModal = document.getElementById('videoModal');
+            
+            modalVideo.pause();
+            modalVideo.setAttribute('src', '');
+            videoModal.style.display = 'none';
+        }
+
+        // Cerrar modal al hacer clic fuera del video
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                cerrarVideo();
+            }
+        });
+    </script>
+</body>
+</html>

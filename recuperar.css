@@ -1,0 +1,446 @@
+:root {
+    --primary: #0047AB;
+    --secondary: #D81E05;
+    --accent: #4A90E2;
+    --white: #ffffff;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --success: #28a745;
+    --danger: #dc3545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, var(--primary), #002d6d);
+    min-height: 100vh;
+}
+
+.recovery-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.recovery-container {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+}
+
+.recovery-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.recovery-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo img {
+    height: 80px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.recovery-header h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.recovery-header p {
+    color: var(--gray-600);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gray-300);
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--gray-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.step.active .step-number {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+
+.step.completed .step-number {
+    background: var(--success);
+}
+
+.step span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    text-align: center;
+}
+
+.step.active span {
+    color: var(--primary);
+}
+
+/* Form Styles */
+.recovery-form {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.recovery-form.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--gray-300);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--white);
+    font-weight: 500;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-group input::placeholder {
+    color: var(--gray-600);
+    font-weight: 400;
+}
+
+/* Password Input */
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    padding: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--primary);
+}
+
+/* Code Info */
+.code-info {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: var(--gray-100);
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.code-info p {
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.resend-code {
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.resend-code:hover {
+    color: var(--primary);
+}
+
+.resend-code:disabled {
+    color: var(--gray-500);
+    cursor: not-allowed;
+}
+
+/* Password Strength */
+.password-strength {
+    margin-top: 0.5rem;
+    height: 4px;
+    background: var(--gray-300);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-weak { width: 33%; background: var(--danger); }
+.strength-medium { width: 66%; background: #f39c12; }
+.strength-strong { width: 100%; background: var(--success); }
+
+/* Button */
+.btn-recovery {
+    width: 100%;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+}
+
+.btn-recovery:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+}
+
+.btn-recovery:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+}
+
+.btn-text {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.btn-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+.btn-recovery.loading .btn-text {
+    opacity: 0;
+}
+
+.btn-recovery.loading .btn-loader {
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Recovery Footer */
+.recovery-footer {
+    text-align: center;
+}
+
+.back-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.back-link:hover {
+    color: var(--secondary);
+    background: rgba(216, 30, 5, 0.1);
+}
+
+/* Messages */
+.success-message, .error-message {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: none;
+    animation: slideIn 0.3s ease;
+    font-weight: 500;
+}
+
+.success-message {
+    background: linear-gradient(135deg, #e8f5e8, #d4edda);
+    color: var(--success);
+    border-left: 4px solid var(--success);
+}
+
+.error-message {
+    background: linear-gradient(135deg, #ffe6e6, #ffcccc);
+    color: var(--danger);
+    border-left: 4px solid var(--danger);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .recovery-page {
+        padding: 1rem;
+    }
+    
+    .recovery-container {
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .recovery-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .logo img {
+        height: 70px;
+    }
+    
+    .progress-steps {
+        margin-bottom: 2rem;
+    }
+    
+    .step span {
+        font-size: 0.75rem;
+    }
+    
+    .btn-recovery {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .recovery-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .recovery-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo img {
+        height: 60px;
+    }
+    
+    .step-number {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+}

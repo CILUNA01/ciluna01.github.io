@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Filipo's Design</title>
+    <link rel="stylesheet" href="contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <img src="img/LOGOO.png" alt="Filipo's Design" class="logo-image">
+            </div>
+            <!-- MENU HAMBURGUESA -->
+<button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html" class="active">Contacto</a>
+                <a href="cotizaciones.html" class="btn-primary">Cotiza ahora</a>
+            </div>
+            <div class="nav-icons">
+    <!-- Icono de Usuario directo a login -->
+    <a href="login.html" class="user-container">
+        <img src="img/user.png" alt="Usuario" class="nav-icon user-icon">
+    </a>
+    
+    <!-- Icono de Carrito -->
+    <a href="carrito.html" class="cart-container">
+        <img src="img/carrito.png" alt="Carrito" class="nav-icon">
+        <span class="cart-count">0</span>
+    </a>
+</div>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <!-- Page Heading -->
+        <section class="page-heading">
+            <div class="container">
+                <div class="heading-content">
+                    <h1>Contáctanos</h1>
+                    <p>¿Tienes una idea o pregunta? Estamos aquí para ayudarte a hacerla realidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <div class="form-container">
+                            <h2>Envíanos un mensaje</h2>
+                            <form class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Teléfono</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono">
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">¿De dónde nos contacta?</label>
+                                    <input type="text" id="location" name="location" placeholder="País, estado o ciudad">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensaje</label>
+                                    <textarea id="message" name="message" placeholder="Cuéntanos sobre tu proyecto o idea..." rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary large full-width">Enviar Mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info-section">
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Ubicación</h3>
+                                    <p>Constitución N° 1004, El Dulce Nombre,<br>41100 Chilapa de Álvarez, Gro.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <span class="material-symbols-outlined">schedule</span>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Horario de Atención</h3>
+                                    <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                                    <p>Sábado: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <span class="material-symbols-outlined">phone</span>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Teléfono</h3>
+                                    <p>+52 1 756 100 9296</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <span class="material-symbols-outlined">share</span>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Síguenos</h3>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/5217561009296" target="_blank" aria-label="WhatsApp">
+                                            <img src="img/w1.png" alt="WhatsApp" class="social-icon">
+                                        </a>
+                                        <a href="https://www.facebook.com/share/1Fc7dzfv68/" target="_blank" aria-label="Facebook">
+                                            <img src="img/f1.png" alt="Facebook" class="social-icon">
+                                        </a>
+                                        <a href="https://www.instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
+                                            <img src="img/i1.png" alt="Instagram" class="social-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa Section -->
+                <div class="map-section">
+                    <h2>Encuéntranos Fácilmente</h2>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3790.234567890123!2d-98.12345678901234!3d17.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c8a123456789ab%3A0x1234567890abcdef!2sFilipo's%20Design!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-overlay">
+                            <a href="https://maps.google.com/?q=Constitución+N°+1004,+El+Dulce+Nombre,+41100+Chilapa+de+Álvarez,+Gro." 
+                               target="_blank" 
+                               class="btn-primary">
+                                <span class="material-symbols-outlined">directions</span>
+                                Cómo llegar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Filipo's Design. Todos los derechos reservados.<br>Chilapa de Alvarez, Guerrero, México</p>
+                <div class="social-links">
+                    <a href="https://wa.me/527771795255" target="_blank" aria-label="WhatsApp">
+                        <img src="img/w1.png" alt="WhatsApp" class="social-icon">
+                    </a>
+                    <a href="https://www.facebook.com/share/1Fc7dzfv68/" target="_blank" aria-label="Facebook">
+                        <img src="img/f1.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
+                        <img src="img/i1.png" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="contacto.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

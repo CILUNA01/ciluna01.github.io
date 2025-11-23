@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Filipo's Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <img src="img/LOGOO.png" alt="Filipo's Design" class="logo-image">
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="cotizaciones.html" class="btn-primary">Cotiza ahora</a>
+                </div>
+                <div class="nav-icons">
+                    <!-- Icono de Usuario -->
+                    <a href="login.html" class="user-container">
+                        <img src="img/user.png" alt="Usuario" class="nav-icon user-icon">
+                    </a>
+                    
+                    <!-- Icono de Carrito -->
+                    <a href="carrito.html" class="cart-container">
+                        <img src="img/carrito.png" alt="Carrito" class="nav-icon">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="register-page">
+        <div class="register-container">
+            <div class="register-header">
+                <div class="logo">
+                    <img src="img/LOGOO.png" alt="Filipo's Design">
+                </div>
+                <h1>Crear Cuenta</h1>
+                <p>Únete a Filipo's Design y comienza a crear</p>
+            </div>
+
+            <form class="register-form" id="registerForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido *</label>
+                        <input type="text" id="apellido" name="apellido" required placeholder="Tu apellido">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="empresa">Empresa (opcional)</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="+52 123 456 7890">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña *</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required placeholder="Crea una contraseña segura">
+                        <button type="button" class="toggle-password">👁️</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Contraseña *</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Repite tu contraseña">
+                        <button type="button" class="toggle-password">👁️</button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="terms-checkbox">
+                        <input type="checkbox" id="acceptTerms" required>
+                        <span class="checkmark"></span>
+                        <span class="terms-text">
+                            Acepto los <a href="#" class="terms-link">términos y condiciones</a> y la 
+                            <a href="#" class="terms-link">política de privacidad</a>
+                        </span>
+                    </label>
+
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" id="newsletter">
+                        <span class="checkmark"></span>
+                        <span class="newsletter-text">
+                            Quiero recibir noticias y promociones de Filipo's Design
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-register">
+                    <span class="btn-text">Crear Cuenta</span>
+                </button>
+
+                <div class="register-footer">
+                    <p>¿Ya tienes cuenta? <a href="login.html" class="login-link">Inicia sesión aquí</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>© 2025 Filipo's Design. Todos los derechos reservados.</p>
+                    <p>Chilapa de Alvarez, Guerrero, México</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://wa.me/527771795255" target="_blank" aria-label="WhatsApp">
+                        <img src="img/w1.png" alt="WhatsApp" class="social-icon">
+                    </a>
+                    <a href="https://www.facebook.com/share/1Fc7dzfv68/" target="_blank" aria-label="Facebook">
+                        <img src="img/f1.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
+                        <img src="img/i1.png" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Filipo's Design</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="../img/LOGOO.png" alt="Filipo's Design">
+                    <h2>Filipo's Admin</h2>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#" class="nav-item active" data-target="dashboard-section">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-target="pedidos-section">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Pedidos</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-target="categorias-section">
+                            <i class="fas fa-th-large"></i>
+                            <span>Categorías</span>
+                            <span class="badge">6</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-target="clientes-section">
+                            <i class="fas fa-users"></i>
+                            <span>Clientes</span>
+                            <span class="badge">12</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-target="contenido-section">
+                            <i class="fas fa-images"></i>
+                            <span>Contenido</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-target="reportes-section">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Reportes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-target="actividades-section">
+                            <i class="fas fa-history"></i>
+                            <span>Actividades</span>
+                        </a>
+                    </li>
+                    <li class="admin-only">
+                        <a href="#" class="nav-item" data-target="usuarios-section">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Usuarios Admin</span>
+                        </a>
+                    </li>
+                    <li class="admin-only">
+                        <a href="#" class="nav-item" data-target="configuracion-section">
+                            <i class="fas fa-cog"></i>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+    <a href="../index.html" target="_blank" class="nav-item visit-site">
+        <i class="fas fa-external-link-alt"></i>
+        <span>🌐</span>
+    </a>
+    <a href="#" class="nav-item logout">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Cerrar Sesión</span>
+    </a>
+</div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="section-title">Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=3498db&color=fff" alt="Admin">
+                        <span>Super Administrador</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Secciones de contenido -->
+            <div class="content-wrapper">
+                <!-- ===== DASHBOARD ===== -->
+                <section id="dashboard-section" class="section active">
+                    <div class="section-header">
+                        <h2>Dashboard</h2>
+                        <p>Resumen general de tu negocio</p>
+                    </div>
+                    
+                    <!-- Métricas -->
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon primary">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="metric-info">
+                                <h3>15</h3>
+                                <p>Pedidos del Mes</p>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon success">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="metric-info">
+                                <h3>$8,450</h3>
+                                <p>Ingresos Totales</p>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon warning">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-info">
+                                <h3>24</h3>
+                                <p>Clientes Nuevos</p>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon danger">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="metric-info">
+                                <h3>3</h3>
+                                <p>Pedidos Pendientes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pedidos Recientes -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Pedidos Recientes</h3>
+                            <a href="#" class="view-all">Ver todos</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="recent-orders">
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <span class="order-id">#00125</span>
+                                        <span class="order-customer">María González</span>
+                                        <span class="order-service">Bordado en Playera</span>
+                                    </div>
+                                    <div class="order-status pending">Pendiente</div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <span class="order-id">#00124</span>
+                                        <span class="order-customer">Carlos Rodríguez</span>
+                                        <span class="order-service">Serigrafía en Gorras</span>
+                                    </div>
+                                    <div class="order-status process">En Proceso</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== PEDIDOS ===== -->
+                <section id="pedidos-section" class="section">
+                    <div class="section-header">
+                        <h2>Gestión de Pedidos</h2>
+                        <p>Administra y da seguimiento a todos los pedidos</p>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Buscar pedidos...">
+                        </div>
+                        <select class="filter-select">
+                            <option>Todos los estados</option>
+                            <option>Pendiente</option>
+                            <option>En proceso</option>
+                            <option>Completado</option>
+                        </select>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Nuevo Pedido
+                        </button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Cliente</th>
+                                    <th>Servicio</th>
+                                    <th>Fecha</th>
+                                    <th>Total</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#00125</td>
+                                    <td>María González</td>
+                                    <td>Bordado en Playera</td>
+                                    <td>15/01/2024</td>
+                                    <td>$450.00</td>
+                                    <td><span class="status-badge pending">Pendiente</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Cambiar Estado">
+                                            <i class="fas fa-sync-alt"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Ver Detalles">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#00124</td>
+                                    <td>Carlos Rodríguez</td>
+                                    <td>Serigrafía en Gorras</td>
+                                    <td>14/01/2024</td>
+                                    <td>$320.00</td>
+                                    <td><span class="status-badge process">En Proceso</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Cambiar Estado">
+                                            <i class="fas fa-sync-alt"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Ver Detalles">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- ===== CATEGORÍAS ===== -->
+                <section id="categorias-section" class="section">
+                    <div class="section-header">
+                        <h2>Gestión de Categorías</h2>
+                        <p>Administra tus servicios y categorías</p>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Nueva Categoría
+                        </button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
+                                    <th>Productos</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bordado Computarizado</td>
+                                    <td>Acabados profesionales en prendas y textiles</td>
+                                    <td>15</td>
+                                    <td><span class="status-badge completed">Activa</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Eliminar">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Serigrafía</td>
+                                    <td>Ideal para grandes volúmenes</td>
+                                    <td>8</td>
+                                    <td><span class="status-badge completed">Activa</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Eliminar">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- ===== CLIENTES ===== -->
+                <section id="clientes-section" class="section">
+                    <div class="section-header">
+                        <h2>Gestión de Clientes</h2>
+                        <p>Administra tu base de clientes</p>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Buscar clientes...">
+                        </div>
+                        <select class="filter-select">
+                            <option>Todos los clientes</option>
+                            <option>Con pedidos</option>
+                            <option>Sin pedidos</option>
+                        </select>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Teléfono</th>
+                                    <th>Pedidos</th>
+                                    <th>Registro</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>María González</td>
+                                    <td>maria@email.com</td>
+                                    <td>+52 55 1234 5678</td>
+                                    <td>3</td>
+                                    <td>10/01/2024</td>
+                                    <td>
+                                        <button class="btn-icon" title="Ver Perfil">
+                                            <i class="fas fa-user"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Contactar">
+                                            <i class="fas fa-envelope"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Rodríguez</td>
+                                    <td>carlos@empresa.com</td>
+                                    <td>+52 55 8765 4321</td>
+                                    <td>5</td>
+                                    <td>05/01/2024</td>
+                                    <td>
+                                        <button class="btn-icon" title="Ver Perfil">
+                                            <i class="fas fa-user"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Contactar">
+                                            <i class="fas fa-envelope"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- ===== CONTENIDO ===== -->
+                <section id="contenido-section" class="section">
+                    <div class="section-header">
+                        <h2>Gestión de Contenido</h2>
+                        <p>Administra las imágenes y galerías de tu sitio</p>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Buscar imágenes...">
+                        </div>
+                        <select class="filter-select">
+                            <option>Todas las categorías</option>
+                            <option>Bordado</option>
+                            <option>Serigrafía</option>
+                            <option>Vinil Textil</option>
+                        </select>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-upload"></i> Subir Imágenes
+                        </button>
+                    </div>
+
+                    <div class="galeria-grid">
+                        <div class="imagen-item">
+                            <div class="imagen-preview" style="background-image: url('../img/BORDADO.jpeg')"></div>
+                            <div class="imagen-info">
+                                <span class="imagen-nombre">Bordado-1.jpg</span>
+                                <span class="imagen-categoria">Bordado</span>
+                            </div>
+                            <div class="imagen-acciones">
+                                <button class="btn-icon" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-icon" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="imagen-item">
+                            <div class="imagen-preview" style="background-image: url('../img/serigrafia.jfif')"></div>
+                            <div class="imagen-info">
+                                <span class="imagen-nombre">Serigrafia-1.jpg</span>
+                                <span class="imagen-categoria">Serigrafía</span>
+                            </div>
+                            <div class="imagen-acciones">
+                                <button class="btn-icon" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-icon" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== REPORTES ===== -->
+                <section id="reportes-section" class="section">
+                    <div class="section-header">
+                        <h2>Reportes y Estadísticas</h2>
+                        <p>Analiza el desempeño de tu negocio</p>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <select class="filter-select">
+                            <option>Últimos 7 días</option>
+                            <option>Últimos 30 días</option>
+                            <option>Este mes</option>
+                            <option>Este año</option>
+                        </select>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-download"></i> Exportar Reporte
+                        </button>
+                    </div>
+
+                    <div class="reportes-grid">
+                        <div class="reporte-card">
+                            <h3>Ventas por Servicio</h3>
+                            <div class="grafico-placeholder">
+                                <p>📊 Gráfico de ventas por servicio</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reporte-card">
+                            <h3>Clientes Nuevos</h3>
+                            <div class="grafico-placeholder">
+                                <p>📈 Gráfico de crecimiento</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reporte-card">
+                            <h3>Pedidos por Estado</h3>
+                            <div class="grafico-placeholder">
+                                <p>🎯 Gráfico de estados</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== ACTIVIDADES ===== -->
+                <section id="actividades-section" class="section">
+                    <div class="section-header">
+                        <h2>Registro de Actividades</h2>
+                        <p>Historial completo de acciones en el sistema</p>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Buscar actividades...">
+                        </div>
+                        <select class="filter-select">
+                            <option>Todas las actividades</option>
+                            <option>Solo mis actividades</option>
+                            <option>Hoy</option>
+                            <option>Esta semana</option>
+                        </select>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Historial de Actividades</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="actividades-list">
+                                <div class="actividad-item">
+                                    <div class="actividad-header">
+                                        <span class="actividad-fecha">16/01/2024 09:15</span>
+                                        <span class="actividad-usuario">Super Administrador</span>
+                                    </div>
+                                    <div class="actividad-detalles">
+                                        <strong>SISTEMA</strong> - Inició sesión en el panel admin
+                                    </div>
+                                </div>
+                                <div class="actividad-item">
+                                    <div class="actividad-header">
+                                        <span class="actividad-fecha">16/01/2024 09:20</span>
+                                        <span class="actividad-usuario">Super Administrador</span>
+                                    </div>
+                                    <div class="actividad-detalles">
+                                        <strong>DASHBOARD</strong> - Accedió al Dashboard
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== USUARIOS ADMIN ===== -->
+                <section id="usuarios-section" class="section">
+                    <div class="section-header">
+                        <h2>Gestión de Usuarios Admin</h2>
+                        <p>Administra los usuarios con acceso al panel</p>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Nuevo Usuario Admin
+                        </button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Tipo</th>
+                                    <th>Último Acceso</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Super Administrador</td>
+                                    <td>admin@filipos.com</td>
+                                    <td>Super Admin</td>
+                                    <td>16/01/2024 09:15</td>
+                                    <td><span class="status-badge completed">Activo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Desactivar">
+                                            <i class="fas fa-user-slash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- ===== CONFIGURACIÓN ===== -->
+                <section id="configuracion-section" class="section">
+                    <div class="section-header">
+                        <h2>Configuración del Sistema</h2>
+                        <p>Configura los ajustes generales de tu sitio</p>
+                    </div>
+                    
+                    <div class="configuracion-grid">
+                        <div class="config-card">
+                            <h3>Información de la Empresa</h3>
+                            <form class="config-form">
+                                <div class="form-group">
+                                    <label>Nombre de la empresa</label>
+                                    <input type="text" value="Filipo's Design">
+                                </div>
+                                <div class="form-group">
+                                    <label>Teléfono</label>
+                                    <input type="text" value="+52 1 756 100 9296">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email de contacto</label>
+                                    <input type="email" value="contacto@filiposdesign.com">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </form>
+                        </div>
+                        
+                        <div class="config-card">
+                            <h3>Configuración General</h3>
+                            <form class="config-form">
+                                <div class="form-group">
+                                    <label>Moneda</label>
+                                    <select>
+                                        <option>MXN - Peso Mexicano</option>
+                                        <option>USD - Dólar Americano</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Zona horaria</label>
+                                    <select>
+                                        <option>America/Mexico_City</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" checked> Recibir notificaciones por email
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+
+
+
